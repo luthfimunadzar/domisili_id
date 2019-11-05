@@ -1,0 +1,152 @@
+// input
+
+input[type="text"].form-control, input[type="email"].form-control, input[type="file"].form-control, input[type="number"].form-control, input[type="password"].form-control, textarea.form-control, select.form-control{
+	padding: 14px 18px;
+	border: 1px solid #F5F5F5;
+	background-color: #F5F5F5;
+	font-size: 13px;
+	color: $t;
+	height: auto;
+	@include border-radius(4px);
+	&::-webkit-input-placeholder { color: rgba($color: $t, $alpha: 0.3); }
+	&:-moz-placeholder { color: rgba($color: $t, $alpha: 0.3); }
+	&::-moz-placeholder { color: rgba($color: $t, $alpha: 0.3); }
+	&:-ms-input-placeholder { color: rgba($color: $t, $alpha: 0.3); }
+	&:hover, &:focus{
+		box-shadow: none;
+	}
+} 
+
+.form-control:disabled{
+	background-color: #F4F4F4;
+}
+
+.wmt{
+	margin-top: 34px;
+}
+
+.cb-mt{
+    margin-top: 11px;
+}
+
+textarea.form-control{
+	resize: none;
+	max-width: 100%;
+	min-height: 130px;
+}
+
+.note-editor.note-frame{
+	border-color: rgba($color: #707070, $alpha: 0.15);
+}
+
+.custom-file{
+	.custom-file-label{
+		padding: 14px 18px 14px 140px;
+		border: none;
+		font-size: 13px;
+		color: $t;
+		height: auto;
+		font-family: $lato;
+		&:after{
+			content: 'Add File' !important;
+			height: auto;
+			border: none;
+			left: 0;
+			right: auto;
+			font-size: 13px;
+			padding: 15px 37px;
+			background-color: #F5F5F5;
+		}
+	}
+}
+
+
+.form-group{
+	margin-bottom: 30px;
+	@media screen and (max-width: 767px){
+		margin-bottom: 15px;
+	}
+	label{
+		font-size: 13px;
+		font-family: $lato;
+		color: $t;
+		margin-bottom: 9px;
+	}
+	span{
+		display: block;
+		font-size: 12px;
+		line-height: 20px;
+		color: rgba($color: $t, $alpha: 0.5);
+		margin-bottom: 10px;
+	}
+}
+
+.custom-checkbox{
+	width: 19%;
+	display: inline-block;
+	@media screen and (max-width: 767px){
+		width: 49%;
+	}
+	.custom-control-label{
+		margin: 0;
+		font-family: $lato;
+		padding: 2px 0 0 0;
+		&::before{
+			background-color: #F5F5F5;
+			border-color: #F5F5F5;
+		}
+	}
+}
+
+.custom-radio{
+	width: 19%;
+	display: inline-block;
+	@media screen and (max-width: 767px){
+		width: 49%;
+	}
+	.custom-control-label{
+		margin: 0;
+		font-family: $lato;
+		padding: 2px 0 0 0;
+		&::before{
+			background-color: #F5F5F5;
+			border-color: #F5F5F5;
+		}
+	}
+	
+}
+
+.custom-control-input:disabled ~ .custom-control-label::before {
+    background-color: #f4f4f4;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before{
+	border-color: $main;
+	background-color: $main;
+}
+
+.input-group.date{
+	.input-group-append{
+		.input-group-text{
+			background-color: #FFF;
+			border-color: rgba($color: #707070, $alpha: 0.15);
+			border-left: none;
+		}
+	}
+}
+
+/*select.form-control{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 25px 10px 15px;
+    background: url(../images/adown.png) no-repeat $wt center right 10px;
+	&:hover, &:focus{
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+select.form-control:not([size]):not([multiple]){
+	height: auto;
+}*/
