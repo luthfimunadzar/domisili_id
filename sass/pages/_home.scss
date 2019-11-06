@@ -24,18 +24,12 @@
     .hero-text{
         position: relative;
         z-index: 3;
-        h5.logo{
-            font-size: 20px;
-            color: $wt;
-            font-weight: 500;
-            font-family: $dosis;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+        .logo{
             margin-bottom: 15px;
             padding-bottom: 15px;
             position: relative;
-            @include media-breakpoint-down(sm) {
-                font-size: 16px;
+            img{
+                width: 200px;
             }
             &::before{
                 content: "";
@@ -43,7 +37,7 @@
                 bottom: 0px;
                 position: absolute;
                 height: 2px;
-                width: 30%;
+                width: 40%;
                 background-color: $wt;
             }
         }
