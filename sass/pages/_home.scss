@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include media-breakpoint-down(sm) {
+        height: 400px;
+    }
     &::before{
         content: "";
         top: 0;
@@ -31,6 +34,9 @@
             margin-bottom: 15px;
             padding-bottom: 15px;
             position: relative;
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+            }
             &::before{
                 content: "";
                 left: 0;
@@ -45,10 +51,16 @@
             font-size: 40px;
             font-family: $dosis;
             color: $wt;
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+            }
         }
         h6{
             font-size: 18px;
             color: $wt;
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+            }
         }
         .note{
             color: $wt;
@@ -62,13 +74,19 @@
     display: block;
     width: 100%;
     padding: 80px 0;
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
     .feature-item{
         border-radius: 4px;
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-        padding: 30px 20px;
+        padding: 20px;
         text-align: center;
         margin-bottom: 30px;
         min-height: 241px;
+        @include media-breakpoint-down(sm) {
+            min-height: auto;
+        }
         img{
             margin-bottom: 20px;
             width: 64px;
@@ -79,12 +97,18 @@
             text-transform: uppercase;
             color: $t;
             margin-bottom: 10px;
+            @include media-breakpoint-down(sm) {
+                font-size: 18px;
+            }
         }
         h6{
             font-size: 14px;
             color: $t;
             margin: 0;
             line-height: 1.5;
+            @include media-breakpoint-down(sm) {
+                font-size: 13px;
+            }
         }
     }
 }
@@ -92,6 +116,9 @@
 .use{
     padding: 80px 0;
     background-color: #f8f8f8;
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
     .use-item{
         img{
             width: 46px;
@@ -102,14 +129,23 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 15px;
+            @include media-breakpoint-down(sm) {
+                font-size: 18px;
+            }
         }
         ol{
             padding-left: 17px;
             margin-bottom: 0px;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 20px;
+            }
             li{
                 font-size: 16px;
                 padding-left: 5px;
                 margin-bottom: 7px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -119,6 +155,9 @@
     display: block;
     padding: 80px 0;
     background-color: #f8f8f8;
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
     .check{
         font-size: 16px;
         display: block;
@@ -126,6 +165,9 @@
         padding-left: 42px;
         position: relative;
         min-height: 32px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
         img{
             display: inline-block;
             margin-right: 7px;
@@ -133,6 +175,37 @@
             position: absolute;
             top: -3px;
             left: 0;
+        }
+        &.numbering{
+            &:before{
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: 0;
+                border: 1.25px solid $main;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $main;
+            }
+            &.one{
+                &:before{
+                    content: "1";
+                }
+            }
+            &.two{
+                &:before{
+                    content: "2";
+                }
+            }
+            &.three{
+                &:before{
+                    content: "3";
+                }
+            }
         }
     }
     .add{
@@ -142,6 +215,9 @@
         padding-left: 42px;
         position: relative;
         min-height: 32px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
         img{
             display: inline-block;
             margin-right: 7px;
@@ -155,6 +231,9 @@
         font-size: 16px;
         margin: 30px 0 20px 0;
         display: block;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
     }
     &.white{
         background-color: #FFF;
@@ -163,6 +242,9 @@
 
 .faq{
     padding: 80px 0;
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
     .accordion{
         .card-header{
             padding: 0;
@@ -174,10 +256,18 @@
                 padding: 10px 15px;
                 background-color: #f8f8f8;
                 transition: all 0.3s ease;
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                }
                 &:hover, &:focus{
                     text-decoration: none;
                     color: $main;
                 }
+            }
+        }
+        .card-body{
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
             }
         }
     }
@@ -189,7 +279,7 @@
     .map{
         height: 500px;
         @include media-breakpoint-down(sm){
-            height: 350px;
+            height: 300px;
         }
     }
     .map-address{
@@ -207,17 +297,24 @@
             box-shadow: none;
             padding: 30px 20px;
             border-bottom: 1px solid #DBDBDB;
+            text-align: center;
         }
         h4{
             font-size: 24px;
             font-family: $dosis;
             margin-bottom: 15px;
             color: $main;
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+            }
         }
         p{
             font-size: 18px;
             color: rgba($color: #000000, $alpha: 0.6);
             margin-bottom: 20px;
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+            }
             a{
                 transition: all 0.3s ease;
                 color: rgba($color: $main, $alpha: 0.6);
