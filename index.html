@@ -54,7 +54,8 @@
 						<!-- <h5 class="logo">DOMISILI.ID</h5> -->
 						<h2 class="slogan">VIRTUAL OFFICE YANG<br/> TERJANGKAU DAN MUDAH</h2>
 						<h6>Di Jantung Kota Jakarta</h6>
-						<h6>Hanya Rp. 200,000,- per bulan atau Rp 2.400.000,- per Tahun</h6>
+						<h6>Hanya Rp. 200,000,- <span class="diskon">Rp. 275.000,-</span> per bulan </h6>
+						<h6>Atau Rp 2.400.000,- <span class="diskon">Rp. 3.300.000,-</span> per Tahun</h6>
 						<p class="note">*Tidak Termasuk Pajak</p>
 						<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Daftar Sekarang</a>
 					</div>
@@ -340,6 +341,22 @@
 		</div>
 	</div>
 	
+	<div class="partnership" style="background-image: url('assets/images/worktogether.jfif');">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h5 class="sec-title">
+						Tertarik dengan Domisili.id?
+					</h5>
+					<h6 class="sec-subtitle">
+						Mari Bekerja sama dan berkolaborasi dengan domisili.id 
+					</h6>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdFZhas43cxt48hZILhkV-k3y1HcRJK3xUkoZzdXZDNmIBmWA/viewform" target="_blank" class="btn btn-primary">Saya Ingin Kerja Sama</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div class="faq">
 		<div class="container">
 			<div class="row">
@@ -398,6 +415,43 @@
 								Surat atau paket yang diterima di alamat kantor virtual disimpan hingga Anda datang dan mengambilnya. Dengan biaya tambahan, kami dapat meneruskan surat Anda kepada Anda, atau Anda dapat menunjuk seseorang untuk mengambilnya untuk Anda. Paket kami mencakup penerusan surat dan telepon. Surat atau paket yang dititipkan di kami hanya sebatas 7 hari sejak surat atau paket tersebut diterima oleh kami.
 							</div>
 						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h5 class="sec-title text-center">
+						Domisili.id Office - Jakarta
+					</h5>
+				</div>
+				<div class="col-md-12">
+					<div class="gallery-slider">
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili7.JPG')"></div>
+						</div>
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili6.JPG')"></div>
+						</div>
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili5.JPG');"></div>
+						</div>
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili4.JPG');"></div>
+						</div>
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili3.JPG');"></div>
+						</div>
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili2.JPG');"></div>
+						</div>
+						<div class="act-item">
+							<div class="image" style="background-image: url('assets/images/domisili1.JPG');"></div>
 						</div>
 					</div>
 				</div>
@@ -825,13 +879,13 @@
 				</div>
 				<div class="modal-body">
 					<!-- <iframe frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.com/domisiliid/form/ContactForm/formperma/HU15w-SemeOyCTdXI5G6XAaM0g5aTv5VLdYfr38b2LY'></iframe> -->
-					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+					<!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
 					<script>
 					hbspt.forms.create({
 						portalId: "6861714",
 						formId: "ee5d5c09-a8ac-4eae-919a-732bdb1b1806"
 					});
-					</script>
+					</script> -->
 				</div>
 			</div>
 		</div>
@@ -872,6 +926,29 @@
 				
 			var marker = new google.maps.Marker({position: {lat: -6.184047, lng: 106.833394}, icon: 'assets/images/pin.png', map: map});
 		}
+		
+        $('.gallery-slider').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        });
 	</script>
 
 </body>

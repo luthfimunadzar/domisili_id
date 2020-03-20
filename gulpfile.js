@@ -22,7 +22,7 @@ gulp.task('css', function() {
 });
 
 // Task for compile js
-gulp.task('scripts', function() {
+gulp.task('scripts', async function(){
   	gulp.src([
             './bower_components/jquery/dist/jquery.min.js',
             './assets/js/popper.min.js',
@@ -46,5 +46,4 @@ gulp.task('fontsAwesome', function() {
     .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
 
-
-gulp.task('default', ['css', 'scripts', 'fontsBootstrap', 'fontsAwesome']);
+gulp.task('default', gulp.series('css', 'scripts', 'fontsBootstrap', 'fontsAwesome'));
