@@ -54,8 +54,8 @@
 						<!-- <h5 class="logo">DOMISILI.ID</h5> -->
 						<h2 class="slogan">VIRTUAL OFFICE YANG<br/> TERJANGKAU DAN MUDAH</h2>
 						<h6>Di Jantung Kota Jakarta</h6>
-						<h6>Hanya Rp 200.000,- <span class="diskon">Rp 275.000,-</span> per bulan </h6>
-						<h6>Atau Rp 2.400.000,- <span class="diskon">Rp 3.300.000,-</span> per Tahun</h6>
+						<h6>Hanya Rp 275.000,- per bulan </h6>
+						<h6>Atau Rp 3.300.000,- per Tahun</h6>
 						<p class="note">*Tidak Termasuk Pajak</p>
 						<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Daftar Sekarang</a>
 					</div>
@@ -470,6 +470,8 @@
 						<p>
 							Jalan Wahid Hasyim No. 10D, Kel. Kebon Sirih, Kec. Menteng, Jakarta Pusat, 10340
 						</p>
+						<h4>DOMISILI.ID Kelapa Gading</h4>
+						<p>Gedung Mahaka Square Ruko A 17, Lt. Dasar & 1 Jl. Raya Kelapa Nias Blok HF 3 Kelapa Gading Barat, Jakarta Utara, 14240 </p>
 						<button class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Daftar Sekarang</button>
 					</div>
 				</div>
@@ -919,13 +921,14 @@
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwpQbIvzRtyUWbnG-fKkhDFrXWqygSoa8&callback=initMap"></script>
 	<script>
 		window.initMap = function(){
-			var mapcenter = {lat: -6.184111, lng: 106.832624};
+			var mapcenter = {lat: -6.1665207714398, lng:  106.82544824454114};
 
 			var map = new google.maps.Map(
-				document.getElementById('map'), {zoom: 18, center: mapcenter}
+				document.getElementById('map'), {zoom: 13, center: mapcenter}
 			);
 				
 			var marker = new google.maps.Marker({position: {lat: -6.184047, lng: 106.833394}, icon: 'assets/images/pin.png', map: map});
+			var marker2 = new google.maps.Marker({position: {lat: -6.149856214247394, lng: 106.90281447067102}, icon: 'assets/images/pin.png', map: map});
 		}
 		
         $('.gallery-slider').slick({

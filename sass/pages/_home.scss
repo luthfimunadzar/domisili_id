@@ -1,210 +1,179 @@
-.hero{
-    width: 100%;
-    height: 100vh;
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-breakpoint-down(sm) {
+    height: 400px;
+  }
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba($color: #000, $alpha: 0.6);
+  }
+  .hero-text {
     position: relative;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include media-breakpoint-down(sm) {
-        height: 400px;
-    }
-    &::before{
+    z-index: 3;
+    .logo {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      position: relative;
+      img {
+        width: 200px;
+      }
+      &::before {
         content: "";
-        top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
+        bottom: 0px;
         position: absolute;
-        z-index: 1;
-        background-color: rgba($color: #000, $alpha: 0.6);
+        height: 2px;
+        width: 40%;
+        background-color: $wt;
+      }
     }
-    .hero-text{
-        position: relative;
-        z-index: 3;
-        .logo{
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            position: relative;
-            img{
-                width: 200px;
-            }
-            &::before{
-                content: "";
-                left: 0;
-                bottom: 0px;
-                position: absolute;
-                height: 2px;
-                width: 40%;
-                background-color: $wt;
-            }
-        }
-        .slogan{
-            font-size: 40px;
-            font-family: $dosis;
-            color: $wt;
-            @include media-breakpoint-down(sm) {
-                font-size: 30px;
-            }
-        }
-        h6{
-            font-size: 18px;
-            color: $wt;
-            @include media-breakpoint-down(sm) {
-                font-size: 16px;
-            }
-            .diskon{
-                text-decoration: line-through;
-                font-size: 14px;
-            }
-        }
-        .note{
-            color: $wt;
-            font-size: 12px;
-            margin-bottom: 35px;
-        }
+    .slogan {
+      font-size: 40px;
+      font-family: $dosis;
+      color: $wt;
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
     }
-}
-
-.feature{
-    display: block;
-    width: 100%;
-    padding: 80px 0;
-    @include media-breakpoint-down(sm) {
-        padding: 40px 0;
-    }
-    .feature-item{
-        border-radius: 4px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 30px;
-        min-height: 241px;
-        @include media-breakpoint-down(sm) {
-            min-height: auto;
-        }
-        img{
-            margin-bottom: 20px;
-            width: 64px;
-        }
-        h5{
-            font-size: 20px;
-            font-family: $dosis;
-            text-transform: uppercase;
-            color: $t;
-            margin-bottom: 10px;
-            @include media-breakpoint-down(sm) {
-                font-size: 18px;
-            }
-        }
-        h6{
-            font-size: 14px;
-            color: $t;
-            margin: 0;
-            line-height: 1.5;
-            @include media-breakpoint-down(sm) {
-                font-size: 13px;
-            }
-        }
-    }
-}
-
-.use{
-    padding: 80px 0;
-    @include media-breakpoint-down(sm) {
-        padding: 40px 0;
-    }
-    .use-item{
-        margin-bottom: 40px;
-        img{
-            width: 64px;
-            margin-bottom: 20px;
-        }
-        h4{
-            font-family: $dosis;
-            font-size: 17px;
-            margin-bottom: 15px;
-            @include media-breakpoint-down(sm) {
-                font-size: 18px;
-            }
-        }
-        ol{
-            padding-left: 17px;
-            margin-bottom: 0px;
-            @include media-breakpoint-down(sm) {
-                margin-bottom: 20px;
-            }
-            li{
-                font-size: 16px;
-                padding-left: 5px;
-                margin-bottom: 7px;
-                @include media-breakpoint-down(sm) {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-    .more-usaha{
-        display: inline-block;
-        color: $second;
+    h6 {
+      font-size: 18px;
+      color: $wt;
+      @include media-breakpoint-down(sm) {
         font-size: 16px;
-        padding: 10px 20px;
-        border: 1px solid $second;
-        transition: all 0.3s ease;
-        margin-top: 20px;
-        border-radius: 4px;
-        &:hover, &:focus{
-            text-decoration: none;
-            border-color: $main;
-        }
+      }
+      .diskon {
+        text-decoration: line-through;
+        font-size: 14px;
+      }
     }
-    &.gray{
-        background-color: #f8f8f8;
+    .note {
+      color: $wt;
+      font-size: 12px;
+      margin-bottom: 35px;
     }
+  }
 }
 
-.get{
-    display: block;
-    padding: 80px 0;
+.feature {
+  display: block;
+  width: 100%;
+  padding: 80px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  .feature-item {
+    border-radius: 4px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 241px;
+    @include media-breakpoint-down(sm) {
+      min-height: auto;
+    }
+    img {
+      margin-bottom: 20px;
+      width: 64px;
+    }
+    h5 {
+      font-size: 20px;
+      font-family: $dosis;
+      text-transform: uppercase;
+      color: $t;
+      margin-bottom: 10px;
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    h6 {
+      font-size: 14px;
+      color: $t;
+      margin: 0;
+      line-height: 1.5;
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.use {
+  padding: 80px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  .use-item {
+    margin-bottom: 40px;
+    img {
+      width: 64px;
+      margin-bottom: 20px;
+    }
+    h4 {
+      font-family: $dosis;
+      font-size: 17px;
+      margin-bottom: 15px;
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+    ol {
+      padding-left: 17px;
+      margin-bottom: 0px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+      }
+      li {
+        font-size: 16px;
+        padding-left: 5px;
+        margin-bottom: 7px;
+        @include media-breakpoint-down(sm) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .more-usaha {
+    display: inline-block;
+    color: $second;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid $second;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    border-radius: 4px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-color: $main;
+    }
+  }
+  &.gray {
     background-color: #f8f8f8;
-    @include media-breakpoint-down(sm) {
-        padding: 40px 0;
-    }
-    .add{
-        font-size: 16px;
-        display: block;
-        margin-bottom: 15px;
-        padding-left: 42px;
-        position: relative;
-        min-height: 32px;
-        @include media-breakpoint-down(sm) {
-            font-size: 14px;
-        }
-        img{
-            display: inline-block;
-            margin-right: 7px;
-            width: 32px;
-            position: absolute;
-            top: -3px;
-            left: 0;
-        }
-    }
-    h6{
-        font-size: 16px;
-        margin: 30px 0 20px 0;
-        display: block;
-        @include media-breakpoint-down(sm) {
-            font-size: 14px;
-        }
-    }
-    &.white{
-        background-color: #FFF;
-    }
+  }
 }
 
-.check{
+.get {
+  display: block;
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  .add {
     font-size: 16px;
     display: block;
     margin-bottom: 15px;
@@ -212,289 +181,324 @@
     position: relative;
     min-height: 32px;
     @include media-breakpoint-down(sm) {
-        font-size: 14px;
+      font-size: 14px;
     }
-    img{
-        display: inline-block;
-        margin-right: 7px;
-        width: 32px;
-        position: absolute;
-        top: -3px;
-        left: 0;
+    img {
+      display: inline-block;
+      margin-right: 7px;
+      width: 32px;
+      position: absolute;
+      top: -3px;
+      left: 0;
     }
-    &.numbering{
-        &:before{
-            content: "";
-            position: absolute;
-            top: -3px;
-            left: 0;
-            border: 1.25px solid $main;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $main;
-        }
-        &.one{
-            &:before{
-                content: "1";
-            }
-        }
-        &.two{
-            &:before{
-                content: "2";
-            }
-        }
-        &.three{
-            &:before{
-                content: "3";
-            }
-        }
-        &.four{
-            &:before{
-                content: "4";
-            }
-        }
+  }
+  h6 {
+    font-size: 16px;
+    margin: 30px 0 20px 0;
+    display: block;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
     }
+  }
+  &.white {
+    background-color: #fff;
+  }
 }
 
-.gallery{
-    background-color: #f8f8f8;
-    padding: 60px 0;
-    @include media-breakpoint-down(sm) {
-        padding: 30px 0;
+.check {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 42px;
+  position: relative;
+  min-height: 32px;
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+  img {
+    display: inline-block;
+    margin-right: 7px;
+    width: 32px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+  &.numbering {
+    &:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      border: 1.25px solid $main;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $main;
     }
-    .gallery-slider{
+    &.one {
+      &:before {
+        content: "1";
+      }
+    }
+    &.two {
+      &:before {
+        content: "2";
+      }
+    }
+    &.three {
+      &:before {
+        content: "3";
+      }
+    }
+    &.four {
+      &:before {
+        content: "4";
+      }
+    }
+  }
+}
+
+.gallery {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
+  .gallery-slider {
+    width: 100%;
+    .act-item {
+      padding: 0 15px;
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+      .image {
         width: 100%;
-        .act-item{
-            padding: 0 15px;
-            @include media-breakpoint-down(sm){
-                padding: 0;
-            }
-            .image{
-                width: 100%;
-                height: 250px;
-                background-size: cover;
-                background-position: center center;
-                position: relative;
-                @include media-breakpoint-down(sm){
-                    height: 170px;
-                }
-                &:before{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba($color: #000000, $alpha: 0.1);
-                }
-            }
+        height: 250px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        @include media-breakpoint-down(sm) {
+          height: 170px;
         }
-        .slick-arrow{
-            background: none;
-            border: none;
-            font-size: 0;
-            @include media-breakpoint-down(sm){
-                display: none !important;
-            }
-            &.slick-prev{
-                position: absolute;
-                left: -20px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 9;
-                @include media-breakpoint-down(md){
-                    
-                }
-                &:before{
-                    content: "\f104";
-                    font-size: 40px;
-                    opacity: 1;
-                    color: $t;
-                    font-family: 'FontAwesome';
-                    transition: all 0.3s ease;
-                    @include media-breakpoint-down(md){
-                        font-size: 50px;
-                    }
-                }
-                &:hover, &:focus{
-                    outline: none;
-                    &:before{
-                        color: $main;
-                        opacity: 1;
-                    }
-                }
-            }
-            &.slick-next{
-                position: absolute;
-                right: -20px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 9;
-                @include media-breakpoint-down(md){
-                }
-                &:before{
-                    content: "\f105";
-                    font-size: 40px;
-                    opacity: 1;
-                    color: $t;
-                    font-family: 'FontAwesome';
-                    transition: all 0.3s ease;
-                    @include media-breakpoint-down(md){
-                        font-size: 50px;
-                    }
-                }
-                &:hover, &:focus{
-                    outline: none;
-                    &:before{
-                        color: $main;
-                        opacity: 1;
-                    }
-                }
-            }
-            &.slick-disabled{
-                opacity: 0;
-                display: none;
-            }
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($color: #000000, $alpha: 0.1);
         }
+      }
     }
-}
-
-.partnership{
-    padding: 120px 0;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    @include media-breakpoint-down(sm){
-        padding: 60px 0;
-    }
-    &:before{
-        content: "";
+    .slick-arrow {
+      background: none;
+      border: none;
+      font-size: 0;
+      @include media-breakpoint-down(sm) {
+        display: none !important;
+      }
+      &.slick-prev {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba($color: #000000, $alpha: 0.6);
-    }
-    .sec-title{
-        color: #FFF;    
-        font-size: 30px;
-        margin-bottom: 5px;
-    }
-    .sec-subtitle{
-        margin-bottom: 25px;
-        color: #FFF;
-        font-size: 18px;
-    }
-    .btn-secondary{
-        @media screen and (max-width: 425px){
-            margin-bottom: 10px;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        @include media-breakpoint-down(md) {
         }
-    }
-}
-
-.faq{
-    padding: 80px 0;
-    @include media-breakpoint-down(sm) {
-        padding: 40px 0;
-    }
-    .accordion{
-        .card-header{
-            padding: 0;
-            background-color: transparent;
-            .btn-link{
-                text-align: left;
-                width: 100%;
-                color: $t;
-                padding: 10px 15px;
-                background-color: #f8f8f8;
-                transition: all 0.3s ease;
-                @include media-breakpoint-down(sm) {
-                    font-size: 14px;
-                }
-                &:hover, &:focus{
-                    text-decoration: none;
-                    color: $main;
-                }
-            }
+        &:before {
+          content: "\f104";
+          font-size: 40px;
+          opacity: 1;
+          color: $t;
+          font-family: "FontAwesome";
+          transition: all 0.3s ease;
+          @include media-breakpoint-down(md) {
+            font-size: 50px;
+          }
         }
-        .card-body{
-            @include media-breakpoint-down(sm) {
-                font-size: 14px;
-            }
-        }
-    }
-}
-
-.map-wrap{
-    position: relative;
-    z-index: 2;
-    .map{
-        height: 500px;
-        @include media-breakpoint-down(sm){
-            height: 300px;
-        }
-    }
-    .map-address{
-        position: absolute; 
-        bottom: calc(100% + 120px);
-        background-color: $wt;
-        padding: 56px 40px;
-        box-shadow: 0px 0px 20px 3px rgba($color: #000000, $alpha: 0.06);
-        @include media-breakpoint-down(md){
-            bottom: calc(100% + 60px);
-        }
-        @include media-breakpoint-down(sm){
-            position: relative;
-            bottom: auto;
-            box-shadow: none;
-            padding: 30px 20px;
-            border-bottom: 1px solid #DBDBDB;
-            text-align: center;
-        }
-        h4{
-            font-size: 24px;
-            font-family: $dosis;
-            margin-bottom: 15px;
+        &:hover,
+        &:focus {
+          outline: none;
+          &:before {
             color: $main;
-            @include media-breakpoint-down(sm) {
-                font-size: 20px;
-            }
+            opacity: 1;
+          }
         }
-        p{
-            font-size: 18px;
-            color: rgba($color: #000000, $alpha: 0.6);
-            margin-bottom: 20px;
-            @include media-breakpoint-down(sm) {
-                font-size: 16px;
-            }
-            a{
-                transition: all 0.3s ease;
-                color: rgba($color: $main, $alpha: 0.6);
-                &:hover, &:focus{
-                    color: $main;
-                    text-decoration: none;
-                }
-            }
+      }
+      &.slick-next {
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        @include media-breakpoint-down(md) {
         }
+        &:before {
+          content: "\f105";
+          font-size: 40px;
+          opacity: 1;
+          color: $t;
+          font-family: "FontAwesome";
+          transition: all 0.3s ease;
+          @include media-breakpoint-down(md) {
+            font-size: 50px;
+          }
+        }
+        &:hover,
+        &:focus {
+          outline: none;
+          &:before {
+            color: $main;
+            opacity: 1;
+          }
+        }
+      }
+      &.slick-disabled {
+        opacity: 0;
+        display: none;
+      }
     }
+  }
 }
 
-.prasayarat{
-    padding: 80px 0;
-    background-color: #f8f8f8;
+.partnership {
+  padding: 120px 0;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    padding: 60px 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+  .sec-title {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .sec-subtitle {
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 18px;
+  }
+  .btn-secondary {
+    @media screen and (max-width: 425px) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.faq {
+  padding: 80px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  .accordion {
+    .card-header {
+      padding: 0;
+      background-color: transparent;
+      .btn-link {
+        text-align: left;
+        width: 100%;
+        color: $t;
+        padding: 10px 15px;
+        background-color: #f8f8f8;
+        transition: all 0.3s ease;
+        @include media-breakpoint-down(sm) {
+          font-size: 14px;
+        }
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $main;
+        }
+      }
+    }
+    .card-body {
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.map-wrap {
+  position: relative;
+  z-index: 2;
+  .map {
+    height: 550px;
     @include media-breakpoint-down(sm) {
-        padding: 40px 0;
+      height: 300px;
     }
-    .ps-title{
-        margin-bottom: 25px;
+  }
+  .map-address {
+    position: absolute;
+    bottom: calc(100% + 66px);
+    background-color: $wt;
+    padding: 56px 40px;
+    box-shadow: 0px 0px 20px 3px rgba($color: #000000, $alpha: 0.06);
+    @include media-breakpoint-down(lg) {
+      bottom: calc(100% + 34px);
     }
-    a{
-        color: $main;
-        font-weight: bold;
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      bottom: auto;
+      box-shadow: none;
+      padding: 30px 20px;
+      border-bottom: 1px solid #dbdbdb;
+      text-align: center;
     }
+    h4 {
+      font-size: 24px;
+      font-family: $dosis;
+      margin-bottom: 15px;
+      color: $main;
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-size: 18px;
+      color: rgba($color: #000000, $alpha: 0.6);
+      margin-bottom: 20px;
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+      a {
+        transition: all 0.3s ease;
+        color: rgba($color: $main, $alpha: 0.6);
+        &:hover,
+        &:focus {
+          color: $main;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.prasayarat {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  .ps-title {
+    margin-bottom: 25px;
+  }
+  a {
+    color: $main;
+    font-weight: bold;
+  }
 }
