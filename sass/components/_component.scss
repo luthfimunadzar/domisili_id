@@ -60,3 +60,24 @@
         }
     }
 }
+
+.price{
+    border: none !important;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1) !important;
+    // margin-bottom: 70px;
+    .card-header{
+        border: none !important;
+        font-weight: bold !important;
+        text-align: center;
+        padding: 1rem 1.25rem;
+        &.prime{
+            background-color: rgba($color: $main, $alpha: 0.1) !important;
+        }
+    }
+    .card-body{
+        p{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
