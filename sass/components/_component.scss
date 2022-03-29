@@ -39,3 +39,24 @@
 .modal-backdrop.show{
     opacity: 0.8;
 }
+
+.table{
+    thead{
+        th{
+            font-size: 14px;
+            border-top: none !important;
+        }
+    }
+    tbody {
+        tr{
+            td{
+                font-size: 14px;
+                vertical-align: middle;
+                border-top: none !important;
+            }
+            &:nth-of-type(odd) {
+                background-color: rgba($color: $main, $alpha: 0.1) !important;
+            }
+        }
+    }
+}
