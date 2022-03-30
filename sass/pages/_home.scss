@@ -82,6 +82,7 @@
     text-align: center;
     margin-bottom: 30px;
     min-height: 241px;
+    border: 1px solid transparent;
     @include media-breakpoint-down(sm) {
       min-height: auto;
     }
@@ -110,10 +111,19 @@
     }
     &.hovered{
       transition: all 0.3s ease;
+      span{
+        color: $main;
+        opacity: 0;
+        font-weight: bold;
+      }
       &:hover, &:focus{
         cursor: pointer;
         background-color: #FFF;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0);
+        border: 1px solid $main;
+        span{
+          opacity: 1;
+        }
       }
     }
   }
